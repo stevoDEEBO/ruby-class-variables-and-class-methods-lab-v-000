@@ -27,10 +27,11 @@ class Song
   end
 
   def self.genre_count
-
+    #genres gimme the count of each genre
+    @@genres.uniq.map{|g| [g,@@genres.count(g)]}.to_h
   end
 
   def self.artist_count
-
+    @@artists.uniq.map{|a| [a,@@artists.count(a)]}.to_h
   end
 end
